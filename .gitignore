@@ -1,0 +1,15 @@
+# https://gungunzp.github.io/outreach_counter/index.html
+
+node_modules/*
+package-lock.json
+
+# IntellijIdea files
+.idea/
+
+# mac
+*._*
+.DS_Store
+
+# windows
+RemoteSystemsTempFiles
+Thumbs.db
