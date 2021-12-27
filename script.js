@@ -1,96 +1,34 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const elems = {
+        heared: document.querySelector('#heared'),
+        answered: document.querySelector('#answered'),
+        declined: document.querySelector('#declined'),
+    };
+    const totalEl = document.querySelector('#total');
 
+    const minusBtnSelector = 'button:first-of-type';
+    const plusBtnSelector = 'button:last-of-type';
+   
+    const data = {};
 
+    const update = (param, updateValue) => () => {
+        // check for non sub-zero (fatality) values
+        if (!(!data[param] && updateValue < 0)) {
+            data[param] += updateValue;
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+            elems[param].querySelector('span').innerHTML = data[param];
 
-const hearedElement = document.querySelector('#heared > div');
-const answeredElement = document.querySelector('#answered > div');
-const declinedElement = document.querySelector('#declined > div');
-const totalElement = document.querySelector('#total > div');
+            totalEl.innerHTML = data.heared + data.answered + data.declined;
+        }
+    }
 
-console.log(hearedElement)
+    for (let prop in elems) {
+        // filling data obj with corresponding values
+        data[prop] = Number(elems[prop].querySelector('span').innerHTML);
 
-let heared = Number(hearedElement.innerHTML);
-let answered = Number(answeredElement.innerHTML);
-let declined = Number(declinedElement.innerHTML);
-let total = Number(totalElement.innerHTML);
-
-
-// heared
-document.querySelector('#heared').querySelector('button:first-of-type').addEventListener('click', function() {
-    heared = heared - 1;
-    hearedElement.innerHTML = heared;
-
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-document.querySelector('#heared').querySelector('button:last-of-type').addEventListener('click', function() {
-    heared = heared + 1;
-    hearedElement.innerHTML = heared;
-
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-
-// answered
-document.querySelector('#answered').querySelector('button:first-of-type').addEventListener('click', function() {
-    answered = answered - 1;
-    answeredElement.innerHTML = answered;
-
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-document.querySelector('#answered').querySelector('button:last-of-type').addEventListener('click', function() {
-    answered = answered + 1;
-    answeredElement.innerHTML = answered;
-
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-
-// declined
-document.querySelector('#declined').querySelector('button:first-of-type').addEventListener('click', function() {
-    declined = declined - 1;
-    declinedElement.innerHTML = declined;
-
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-document.querySelector('#declined').querySelector('button:last-of-type').addEventListener('click', function() {
-    declined = declined + 1;
-    declinedElement.innerHTML = declined;
-
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-
-// total
-document.querySelector('#declined').querySelector('button:first-of-type').addEventListener('click', function() {
-    declined = declined - 1;
-    declinedElement.innerHTML = declined;
-
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-document.querySelector('#declined').querySelector('button:last-of-type').addEventListener('click', function() {
-    declined = declined + 1;
-    declinedElement.innerHTML = declined;
-    
-    total = heared + answered + declined;
-    totalElement.innerHTML = total;
-});
-
-
-
-
-
-
+        // adding on click handlers
+        elems[prop].querySelector(minusBtnSelector).addEventListener('click', update(prop, -1));
+        elems[prop].querySelector(plusBtnSelector).addEventListener('click', update(prop, 1));
+    }
 });
 
