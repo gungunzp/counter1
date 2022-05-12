@@ -1,21 +1,31 @@
+:root {
+  --green: #1ed760;
+  --green-hover: #1fdf64;
+  --text-shadow: 1px 1px 8px #000000cc;
+}
+
 body {
-  background: #000;
   color: #fff;
+  font-family: Arial, sans-serif;
   height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #000;
+  background-image: linear-gradient(#000 80px, var(--green));
 }
 
 h2 {
-  margin-bottom: 0;
+  margin: 25px 0 0;
+  text-shadow: var(--text-shadow);
 }
 
 body > div {
   display: flex;
   font-size: 50px;
-  margin: 12px 0;
+  margin-top: 10px;
+  text-shadow: var(--text-shadow);
 }
 
 body > div > span {
@@ -24,6 +34,25 @@ body > div > span {
 }
 
 button {
-  width: 50px;
-  height: 50px;
+  width: 1em;
+  height: 1em;
+  background-color: var(--green);
+  font-size: 50px;
+  line-height: 1;
+  font-weight: normal;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--green-hover);
+  transform: scale(1.07);
+}
+
+/* centering minus sign (to rewrite) */
+button:first-child {
+  line-height: 0.82;
+  padding-bottom: 0.28em;
 }

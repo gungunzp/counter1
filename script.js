@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const elems = {
-        heared: document.querySelector('#heared'),
-        answered: document.querySelector('#answered'),
-        declined: document.querySelector('#declined'),
+        declined: document.getElementById('declined'),
+        answered: document.getElementById('answered'),
+        heared: document.getElementById('heared'),
     };
-    const totalEl = document.querySelector('#total');
+    const totalEl = document.getElementById('total');
 
     const minusBtnSelector = 'button:first-of-type';
     const plusBtnSelector = 'button:last-of-type';
