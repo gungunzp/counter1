@@ -3,32 +3,55 @@ document.addEventListener("DOMContentLoaded", function () {
         declined: document.getElementById('declined'),
         answered: document.getElementById('answered'),
         heared: document.getElementById('heared'),
+        total: document.getElementById('total'),
     };
-    const totalEl = document.getElementById('total');
 
     const minusBtnSelector = 'button:first-of-type';
     const plusBtnSelector = 'button:last-of-type';
-   
-    const data = {};
 
-    const update = (param, updateValue) => () => {
-        // check for non sub-zero (fatality) values
+    const data = {
+        declined: 0,
+        answered: 0,
+        heared: 0,
+        total: 0,
+    }
+
+    const update = (key, value) => {
+        data[key] = +value;
+        elems[key].querySelector('span').innerHTML = value;
+        localStorage.setItem(key, value);
+    }
+
+    const updateCounter = (param, updateValue) => () => {
+        // check for non sub-zero values
         if (!(!data[param] && updateValue < 0)) {
-            data[param] += updateValue;
-
-            elems[param].querySelector('span').innerHTML = data[param];
-
-            totalEl.innerHTML = data.heared + data.answered + data.declined;
+            update(param, data[param] + updateValue);
+            update('total', data.total + updateValue);
         }
     }
 
-    for (let prop in elems) {
-        // filling data obj with corresponding values
-        data[prop] = Number(elems[prop].querySelector('span').innerHTML);
+    // initialization
+    for (let prop in data) {
+        update(prop, localStorage.getItem(prop) || data[prop]);
 
-        // adding on click handlers
-        elems[prop].querySelector(minusBtnSelector).addEventListener('click', update(prop, -1));
-        elems[prop].querySelector(plusBtnSelector).addEventListener('click', update(prop, 1));
+        // adding on click handlers for update buttons
+        if (prop !== 'total') {
+            elems[prop].querySelector(minusBtnSelector).onclick = updateCounter(prop, -1);
+            elems[prop].querySelector(plusBtnSelector).onclick = updateCounter(prop, 1);
+        }
     }
+
+    // reset
+    document.getElementById('reset').addEventListener('click', () => {
+        if (!!data.total && window.confirm('Ви впевнені, що хочете видалити всі дані?')) {
+            for (let prop in data) {
+                update(prop, 0);
+                // localStorage.clear();
+            }
+        }
+    });
+
+    // share
+    document.getElementById('share').onclick = () => console.table(data);
 });
 

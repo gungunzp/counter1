@@ -13,19 +13,30 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #000;
-  background-image: linear-gradient(#000 80px, var(--green));
+  background-image: linear-gradient(#000 20vh, var(--green));
 }
 
 h2 {
-  margin: 25px 0 0;
+  font-weight: normal;
+  margin: 20px 0 0;
   text-shadow: var(--text-shadow);
 }
 
 body > div {
   display: flex;
   font-size: 50px;
-  margin-top: 10px;
+  margin-top: 12px;
   text-shadow: var(--text-shadow);
+}
+
+.counter {
+  max-width: 160px; /* fix flexbox bug in Safari iOS */
+}
+
+#actions {
+  justify-content: space-between;
+  width: 200px;
+  margin-top: 20px;
 }
 
 body > div > span {
@@ -34,15 +45,12 @@ body > div > span {
 }
 
 button {
-  width: 1em;
-  height: 1em;
   background-color: var(--green);
-  font-size: 50px;
   line-height: 1;
-  font-weight: normal;
-  border-radius: 50%;
+  border-radius: 20%;
   border: none;
   outline: none;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -51,8 +59,21 @@ button:hover {
   transform: scale(1.07);
 }
 
+.counter button {
+  width: 1em;
+  height: 1em;
+  font-size: 50px;
+  border-radius: 50%;
+}
+
 /* centering minus sign (to rewrite) */
-button:first-child {
-  line-height: 0.82;
-  padding-bottom: 0.28em;
+.counter button:first-child {
+  line-height: 0.85;
+  padding-bottom: 0.15em;
+}
+
+#actions button {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 35px;
 }
