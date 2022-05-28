@@ -3,33 +3,27 @@
 https://github.com/gungunzp/outreach_counter/commit/db198257e75e8ed204b808136cb1b173de521a90
 17:30 - 18:00 = 0:30
 
-
 19.12.21
 ? Git & GitHub tweaks
 0:00 - 0:30 = 0:30
-
 
 25.12.21
 add logic and basic styling
 https://github.com/gungunzp/outreach_counter/commit/8cafdb2ff7a6bbbbbce380d1f20f6f60c6ded0ad
 17:30 - 18:00 = 0:30
 
-
 26.12.21
 ? clear logic, add README, refactor html, small style tweaks
 0:30 - 1:30 = 1:00
-
 
 27.12.21
 tweaks and commit previous changes
 https://github.com/gungunzp/outreach_counter/commit/226bbc403ecec70c31e5c4655a5646446cb59dca
 18:30 - 19:00 = 0:30
 
-
 11.05.22
 styling, README add features...
 18:00 - 19:00 = 1:00
-
 
 12.05.22
 styling, README add features, flow, ideas..., commit, push
@@ -39,21 +33,29 @@ https://github.com/gungunzp/outreach_counter/commit/103faff20fb3abaebbcdf7f129bf
 styling tweaks
 20:30 - 21:00 = 0:30
 
-
 16.05.22
 add timing.txt, add time
 18:25 - 18:55 = 0:30
-
 
 17.05.22
 txt to Ukrainian; add: reset functionality (js refactoring, localStorage), share btn, font-awesome; styling
 15:10 - 17:10 = 2:00
 
-
 20.05.22
-styling, clean all and commit
+styling, clean all, commit, push
+https://github.com/gungunzp/outreach_counter/commit/8de7d9cb7b393bc08cf68af42780909e50356f67
 13:30 - 14:30 = 1:00
+
+styling...
+17:30 - 18:00 = 0:30
+
+28.05.22
+add: share functionality, fonts, prettier; tweak markup
+commit, push
+16:00 - 16:30 = 0:30
+17:00 - 18:00 = 1:00
+18:30 - 19:30 = 1:00
 
 --------------------------
 
-total 9:30
+total 12:30

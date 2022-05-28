@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Outreach counter</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		/>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Outreach counter</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<script src="script.js"></script>
-</head>
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet" /> -->
 
-<body>
-	<h2>Відмовились</h2>
-	<div id="declined" class="counter">
-		<button>-</button>
-		<span>0</span>
-		<button>+</button>
-	</div>
-	<h2>Відповіли на питання</h2>
-	<div id="answered" class="counter">
-		<button>-</button>
-		<span>0</span>
-		<button>+</button>
-	</div>
-	<h2>Почули Євангеліє</h2>
-	<div id="heared" class="counter">
-		<button>-</button>
-		<span>0</span>
-		<button>+</button>
-	</div>
-	<h2>Усього</h2>
-	<div id="total">
-		<span>0</span>
-	</div>
-	<div id="actions">
-		<button id="reset"><i class="fa-solid fa-arrow-rotate-right"></i></button> 
-		<button id="share"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-	</div>
-</body>
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+		/> -->
 
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" /> -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<h2>Відмовились:</h2>
+		<div id="declined" class="counter">
+			<button>-</button>
+			<span>0</span>
+			<button>+</button>
+		</div>
+		<h2>Відповіли на питання:</h2>
+		<div id="answered" class="counter">
+			<button>-</button>
+			<span>0</span>
+			<button>+</button>
+		</div>
+		<h2>Почули Євангеліє:</h2>
+		<div id="listened" class="counter">
+			<button>-</button>
+			<span>0</span>
+			<button>+</button>
+		</div>
+		<h2>Усього:</h2>
+		<div id="total">
+			<button id="reset"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+			<span>0</span>
+			<button id="share"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+		</div>
+	</body>
 </html>

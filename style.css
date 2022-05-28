@@ -1,79 +1,84 @@
 :root {
-  --green: #1ed760;
-  --green-hover: #1fdf64;
-  --text-shadow: 1px 1px 8px #000000cc;
+	--green: #1ed760;
+	--green-hover: #1fdf64;
+	/* --shadow: 1px 1px 5px #00000075; */
 }
 
 body {
-  color: #fff;
-  font-family: Arial, sans-serif;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #000;
-  background-image: linear-gradient(#000 20vh, var(--green));
+	color: #fff;
+	font: 14px Arial, sans-serif;
+	/* font: 14px 'Source Sans Pro', sans-serif; */
+	/* font: 14px 'Oswald', sans-serif; */
+	/* font: 16px 'Amatic SC', cursive, Arial, sans-serif; */
+	font: 16px 'PT Sans Narrow', sans-serif;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* background-image: linear-gradient(#000 80vh, var(--green)); */
+	background-image: radial-gradient(circle at top, #000 70vh, var(--green));
+	background-color: #000; /* fallback */
 }
 
 h2 {
-  font-weight: normal;
-  margin: 20px 0 0;
-  text-shadow: var(--text-shadow);
+	font-weight: normal;
+	margin: 20px 0 0;
+	/* text-shadow: var(--shadow); */
 }
 
 body > div {
-  display: flex;
-  font-size: 50px;
-  margin-top: 12px;
-  text-shadow: var(--text-shadow);
+	display: flex;
+	margin-top: 12px;
+	/* text-shadow: var(--shadow); */
 }
 
 .counter {
-  max-width: 160px; /* fix flexbox bug in Safari iOS */
+	width: 160px; /* fix flexbox bug in Safari iOS */
 }
 
-#actions {
-  justify-content: space-between;
-  width: 200px;
-  margin-top: 20px;
+#total {
+	justify-content: space-between;
+	width: 230px;
 }
 
 body > div > span {
-  width: 60px;
-  text-align: center;
+	width: 60px;
+	font-size: 44px;
+	text-align: center;
 }
 
 button {
-  background-color: var(--green);
-  line-height: 1;
-  border-radius: 20%;
-  border: none;
-  outline: none;
-  padding: 0;
-  cursor: pointer;
+	background-color: var(--green);
+	line-height: 1;
+	border-radius: 20%;
+	border: none;
+	outline: none;
+	/* box-shadow: var(--shadow); */
+	padding: 0;
+	cursor: pointer;
 }
 
 button:hover {
-  background-color: var(--green-hover);
-  transform: scale(1.07);
+	background-color: var(--green-hover);
+	transform: scale(1.07);
 }
 
 .counter button {
-  width: 1em;
-  height: 1em;
-  font-size: 50px;
-  border-radius: 50%;
+	width: 1em;
+	height: 1em;
+	font-size: 48px;
+	border-radius: 50%;
 }
 
 /* centering minus sign (to rewrite) */
 .counter button:first-child {
-  line-height: 0.85;
-  padding-bottom: 0.15em;
+	line-height: 0.85;
+	padding-bottom: 0.15em;
 }
 
-#actions button {
-  width: 1.5em;
-  height: 1.5em;
-  font-size: 35px;
+#total button {
+	width: 1.5em;
+	height: 1.5em;
+	font-size: 35px;
 }
