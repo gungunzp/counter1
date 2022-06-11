@@ -1,5 +1,5 @@
 # OUTREACH COUNTER
-[https://gungunzp.github.io/OUTREACH_COUNTER_1_0](https://gungunzp.github.io/OUTREACH_COUNTER_1_0)
+[https://gungunzp.github.io/counter1](https://gungunzp.github.io/counter1)
 
 ### Future features:
 - posibility to share results (data, date, ...location) [WIP]
@@ -15,11 +15,12 @@
 - donation page :)
 
 ### Dev Flow:
-0. <template> ...
+0. <template> ... ////////
 1. add gulp -> scss
 2. move to react...
 3. mobile app (React Native)
 4. -font awesome- +icomoon
+5. unique id-s for counters instead of names
 
 #### Ideas:
 - on increase btn long tap
