@@ -37,29 +37,37 @@
 	</head>
 
 	<body>
-		<h2>Відмовились:</h2>
-		<div id="declined" class="counter">
-			<button>-</button>
-			<span>0</span>
-			<button>+</button>
-		</div>
-		<h2>Відповіли на питання:</h2>
-		<div id="answered" class="counter">
-			<button>-</button>
-			<span>0</span>
-			<button>+</button>
-		</div>
-		<h2>Почули Євангеліє:</h2>
-		<div id="listened" class="counter">
-			<button>-</button>
-			<span>0</span>
-			<button>+</button>
-		</div>
-		<h2>Усього:</h2>
-		<div id="total">
-			<button id="reset"><i class="fa-solid fa-arrow-rotate-right"></i></button>
-			<span>0</span>
-			<button id="share"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-		</div>
+		<section class="category">
+			<h2 class="category__title">Відмовились:</h2>
+			<div id="declined" class="category__actions">
+				<button>-</button>
+				<span class="category__value">0</span>
+				<button>+</button>
+			</div>
+		</section>
+		<section class="category">
+			<h2 class="category__title">Відповіли на питання:</h2>
+			<div id="answered" class="category__actions">
+				<button>-</button>
+				<span class="category__value">0</span>
+				<button>+</button>
+			</div>
+		</section>
+		<section class="category">
+			<h2 class="category__title">Почули Євангеліє:</h2>
+			<div id="listened" class="category__actions">
+				<button>-</button>
+				<span class="category__value">0</span>
+				<button>+</button>
+			</div>
+		</section>
+		<section class="category">
+			<h2 class="category__title">Усього:</h2>
+			<div id="total" class="category__actions category__actions--total">
+				<button id="reset"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+				<span class="category__value">0</span>
+				<button id="share"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+			</div>
+		</section>
 	</body>
 </html>

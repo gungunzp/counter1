@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const update = (key, value) => {
 		data[key] = +value;
-		elems[key].querySelector('span').innerHTML = value;
+		elems[key].querySelector('.category__value').innerHTML = value;
 		localStorage.setItem(key, value);
 	};
 

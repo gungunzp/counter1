@@ -56,6 +56,10 @@ commit, push
 17:00 - 18:00 = 1:00
 18:30 - 19:30 = 1:00
 
+1.7.22
+add: more componential approach, additional fonts to try
+15:30 - 16:30 = 1:00
+
 --------------------------
 
-total 12:30
+total 13:30

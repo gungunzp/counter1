@@ -21,40 +21,46 @@ body {
 	background-color: #000; /* fallback */
 }
 
-h2 {
-	font-weight: normal;
-	margin: 20px 0 0;
-	/* text-shadow: var(--shadow); */
-}
-
-body > div {
+.category {
 	display: flex;
-	margin-top: 12px;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.category__title {
+	font-weight: normal;
+	margin: 10px 0;
 	/* text-shadow: var(--shadow); */
 }
 
-.counter {
+.category__actions {
+	display: flex;
 	width: 160px; /* fix flexbox bug in Safari iOS */
+	/* text-shadow: var(--shadow); */
 }
 
-#total {
+.category__actions--total {
 	justify-content: space-between;
 	width: 230px;
 }
 
-body > div > span {
+.category__value {
 	width: 60px;
 	font-size: 44px;
 	text-align: center;
 }
 
 button {
+	width: 1em;
+	height: 1em;
+	font-size: 48px;
 	background-color: var(--green);
 	line-height: 1;
-	border-radius: 20%;
 	border: none;
 	outline: none;
 	/* box-shadow: var(--shadow); */
+	border-radius: 50%;
 	padding: 0;
 	cursor: pointer;
 }
@@ -64,21 +70,15 @@ button:hover {
 	transform: scale(1.07);
 }
 
-.counter button {
-	width: 1em;
-	height: 1em;
-	font-size: 48px;
-	border-radius: 50%;
-}
-
 /* centering minus sign (to rewrite) */
-.counter button:first-child {
+.category__actions button:first-child {
 	line-height: 0.85;
 	padding-bottom: 0.15em;
 }
 
-#total button {
+.category__actions--total button {
 	width: 1.5em;
 	height: 1.5em;
 	font-size: 35px;
+	border-radius: 20%;
 }
