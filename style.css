@@ -82,3 +82,10 @@ button:hover {
 	font-size: 35px;
 	border-radius: 20%;
 }
+
+#update {
+	color: #5aeb8e;
+	position: relative;
+	left: 30px;
+	top: 10px;
+}

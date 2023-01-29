@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		listened: document.getElementById('listened'),
 		total: document.getElementById('total'),
 	};
+	const last_update = document.getElementById('update');
 
 	const minusBtnSelector = 'button:first-of-type';
 	const plusBtnSelector = 'button:last-of-type';
@@ -41,12 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		answered: 0,
 		listened: 0,
 		total: 0,
+		last_update: (new Date()).toLocaleString()
 	};
 
 	const update = (key, value) => {
 		data[key] = +value;
-		elems[key].querySelector('.category__value').innerHTML = value;
-		localStorage.setItem(key, value);
+		key !== 'last_update' && (elems[key].querySelector('.category__value').innerHTML = value);
+		last_update.innerHTML = 'оновлено о <b>' + (new Date()).toLocaleTimeString() + '</b> <small>' + (new Date()).toLocaleDateString() + '</small>';
+		(+value || key === 'last_update') && localStorage.setItem(key, value);
 	};
 
 	const updateCounter = (param, updateValue) => () => {
@@ -62,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		update(prop, localStorage.getItem(prop) || data[prop]);
 
 		// adding on click handlers for update buttons
-		if (prop !== 'total') {
+		if (prop !== 'total' && prop !== 'last_update') {
 			elems[prop].querySelector(minusBtnSelector).onclick = updateCounter(prop, -1);
 			elems[prop].querySelector(plusBtnSelector).onclick = updateCounter(prop, 1);
 		}
@@ -73,7 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (!!data.total && window.confirm(txt.areYouSure)) {
 			for (let prop in data) {
 				update(prop, 0);
-				// localStorage.clear();
+
+				// test it on mobiles (for the renaming of 'total' key to '_total')
+				localStorage.clear();
 			}
 		}
 	});

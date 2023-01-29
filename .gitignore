@@ -13,3 +13,6 @@ package-lock.json
 # windows
 RemoteSystemsTempFiles
 Thumbs.db
+
+# IDE
+.vscode
