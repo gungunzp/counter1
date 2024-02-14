@@ -21,15 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		declined: 'Відмовились:',
 		answered: 'Відповіли на питання:',
 		listened: 'Почули Євангеліє:',
+		accepted: 'Приняли Ісуса:',
 		total: 'Усього:',
 		areYouSure: 'Ви впевнені, що хочете видалити всі дані?',
 		copied: 'Ці дані були скопійовані до буфера:',
+		refreshedAt: 'оновлено о ',
 	};
 
 	const elems = {
 		declined: document.getElementById('declined'),
 		answered: document.getElementById('answered'),
 		listened: document.getElementById('listened'),
+		accepted: document.getElementById('accepted'),
 		total: document.getElementById('total'),
 	};
 	const last_update = document.getElementById('update');
@@ -41,14 +44,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		declined: 0,
 		answered: 0,
 		listened: 0,
+		accepted: 0,
 		total: 0,
-		last_update: (new Date()).toLocaleString()
+		last_update: (new Date()).toLocaleString(),
 	};
 
 	const update = (key, value) => {
 		data[key] = +value;
 		key !== 'last_update' && (elems[key].querySelector('.category__value').innerHTML = value);
-		last_update.innerHTML = 'оновлено о <b>' + (new Date()).toLocaleTimeString() + '</b> <small>' + (new Date()).toLocaleDateString() + '</small>';
+		last_update.innerHTML = `${txt.refreshedAt}<b>` + (new Date()).toLocaleTimeString() + '</b> <small>' + (new Date()).toLocaleDateString() + '</small>';
 		(+value || key === 'last_update') && localStorage.setItem(key, value);
 	};
 
@@ -91,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		// }.${d.getFullYear()}`;
 		const date = d.toLocaleString();
 
-		const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.total} ${data.total}\n\n${date}`;
+		const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.accepted} ${data.accepted}\n${txt.total} ${data.total}\n\n${date}`;
 		// add location
 
 		navigator.clipboard.writeText(result);
