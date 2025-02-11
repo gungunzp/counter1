@@ -69,6 +69,12 @@ add last_update time indicator, add .vscode to .gitignore
 add new 'Accepted Jesus' block, add refreshedAt txt constant
 0:00, 23:30 ~ 0:30
 
+11.2.25
+add playwright testing library
+
+fix styling for small mobile screens
+add favicon and change title ?
+
 --------------------------
 
 total 14:30
