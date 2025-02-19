@@ -71,10 +71,12 @@ add new 'Accepted Jesus' block, add refreshedAt txt constant
 
 11.2.25
 add playwright testing library
+...19.2.25
+add tests for basic counter logic
 
 fix styling for small mobile screens
 add favicon and change title ?
 
 --------------------------
 
-total 14:30
+total 14:30 (w/o pw tests)
