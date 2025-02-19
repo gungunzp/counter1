@@ -1,7 +1,6 @@
 # https://gungunzp.github.io/outreach_counter
 
 node_modules/*
-package-lock.json
 
 # IntellijIdea files
 .idea/
