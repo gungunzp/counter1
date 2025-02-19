@@ -10,7 +10,7 @@ const getDecreaseButton = element => element.getByRole('button', { name: '-' });
 const getCounterValueElement = element => element.locator('span.category__value');
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('/');
+  await page.goto(process.env.CI ? '/counter1' : '/');
 });
 
 test('has title', async ({ page }) => {
@@ -18,7 +18,7 @@ test('has title', async ({ page }) => {
 });
 
 test('has Declined heading', async ({ page }) => {
-  const declinedHeading = page.getByRole('heading').nth(0);
+  const declinedHeading = page.getByRole('heading').first();
 
   await expect(declinedHeading).toBeVisible();
   await expect(declinedHeading).toHaveText(/Відмовились/);
