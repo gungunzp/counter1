@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+	// const appLink = 'https://gungunzp.github.io/counter1';
+
 	const mobileAndTabletCheck = () => {
 		let check = false;
 
@@ -89,14 +91,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// share
 	document.getElementById('share').onclick = () => {
-		const d = new Date();
+		// const d = new Date();
 		// const date = `${d.getHours()}:${d.getMinutes()} ${d.getDate()}.${
 		// 	d.getMonth() + 1
 		// }.${d.getFullYear()}`;
-		const date = d.toLocaleString();
+		// const date = d.toLocaleString();
 
-		const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.accepted} ${data.accepted}\n${txt.total} ${data.total}\n\n${date}`;
-		// add location
+		const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.accepted} ${data.accepted}\n${txt.total} ${data.total}`;
+		// const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.accepted} ${data.accepted}\n${txt.total} ${data.total}\n\n${date} \n\n${appLink}`;
+		// add location ??? (zp city ...)
 
 		navigator.clipboard.writeText(result);
 

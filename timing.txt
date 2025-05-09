@@ -74,9 +74,12 @@ add playwright testing library
 ...19.2.25
 add tests for basic counter logic
 
-fix styling for small mobile screens
-add favicon and change title ?
+9.5.25
+hide date in report; add cross favicon; fix btn styles for iPhone; hidden: add link to app in report; readme: add run instruction; tests rnd: google translate WIP
+~ 1:00
+
+fix styling for small mobile screens (iPhone SE 1 ???)
 
 --------------------------
 
-total 14:30 (w/o pw tests)
+total 15:30 (w/o pw tests)

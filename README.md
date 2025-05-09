@@ -1,6 +1,18 @@
 # OUTREACH COUNTER
 [https://gungunzp.github.io/counter1](https://gungunzp.github.io/counter1)
 
+
+## Run app locally
+1st option is to use [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+## Run tests locally [(playwright docs)](https://playwright.dev/docs/running-tests)
+```
+npx playwright test
+npx playwright test --ui
+```
+
+
+
 ### Future features:
 - posibility to share results (data, date, ...location) [WIP]
 -- select what to share (share mode: checkboxes near counters, share selected - btn)

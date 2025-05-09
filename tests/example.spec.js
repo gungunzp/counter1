@@ -1,19 +1,23 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+const TEST_TEXT_EN = 'Jesus is Lord';
+// const TEST_TEXT_UA = 'Ісус Господь'; // WIP
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+test.beforeEach(async ({ page }) => {
+  await page.goto('https://translate.google.com/?sl=auto&tl=uk&op=translate');
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+// test('has title', async ({ page }) => {
+//   await expect(page).toHaveTitle(/Google Translate/);
+// });
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+test('textarea should be present', async ({ page }) => {
+  const textarea = page.locator('textarea[aria-label="Source text"]');
+
+  await textarea.fill(TEST_TEXT_EN);
+  await textarea.press('Enter');
 
   // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  await expect(textarea).toBeVisible();
 });
