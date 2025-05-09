@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('has title', async ({ page }) => {
-  await expect(page).toHaveTitle('Outreach Counter');
+  await expect(page).toHaveTitle('OutreachCounter');
 });
 
 test('has Declined heading', async ({ page }) => {

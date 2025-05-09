@@ -1,5 +1,6 @@
 # OUTREACH COUNTER
-[https://gungunzp.github.io/counter1](https://gungunzp.github.io/counter1)
+
+<a href="https://gungunzp.github.io/counter1" target="_blank">https://gungunzp.github.io/counter1</a>
 
 
 ## Run app locally

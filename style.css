@@ -57,7 +57,7 @@ button {
 	font-size: 48px;
 	color: #000;
 	background-color: var(--green);
-	line-height: .9;
+	line-height: 1.1;
 	border: none;
 	outline: none;
 	/* box-shadow: var(--shadow); */
