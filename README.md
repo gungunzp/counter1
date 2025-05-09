@@ -4,7 +4,7 @@
 
 
 ## Run app locally
-1st option is to use [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+1st option is to use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">LiveServer</a>.
 
 ## Run tests locally [(playwright docs)](https://playwright.dev/docs/running-tests)
 ```
