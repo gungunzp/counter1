@@ -80,6 +80,19 @@ hide date in report; add cross favicon; fix btn styles for iPhone; hidden: add l
 
 fix styling for small mobile screens (iPhone SE 1 ???)
 
+
+24.10.25
+fix wording for accepted section, hide nullish values from report
+~ 1:00
+
+next planned features:
+burger-menu:
+    merge reports:
+    { textarea }
+    reports:
+    [] show nullish values
+    [] show date/time in report
+
 --------------------------
 
-total 15:30 (w/o pw tests)
+total 16:30 (w/o pw tests)

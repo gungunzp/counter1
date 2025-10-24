@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		declined: 'Відмовились:',
 		answered: 'Відповіли на питання:',
 		listened: 'Почули Євангеліє:',
-		accepted: 'Приняли Ісуса:',
+		accepted: 'Прийняли Ісуса:',
 		total: 'Усього:',
 		areYouSure: 'Ви впевнені, що хочете видалити всі дані?',
 		copied: 'Ці дані були скопійовані до буфера:',
@@ -97,7 +97,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		// }.${d.getFullYear()}`;
 		// const date = d.toLocaleString();
 
-		const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.accepted} ${data.accepted}\n${txt.total} ${data.total}`;
+		const showNullishData = false;
+		const result = Object.keys(elems).reduce((accumulatedResultString, currElemKey) => {
+			if (showNullishData || data[currElemKey]) {
+				accumulatedResultString += txt[currElemKey] + ' ' + data[currElemKey] + '\n';
+			}
+
+			return accumulatedResultString;
+
+		}, '');
+		console.log('result: ', result);
+
+		// const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.accepted} ${data.accepted}\n${txt.total} ${data.total}`;
 		// const result = `${txt.declined} ${data.declined}\n${txt.answered} ${data.answered}\n${txt.listened} ${data.listened}\n${txt.accepted} ${data.accepted}\n${txt.total} ${data.total}\n\n${date} \n\n${appLink}`;
 		// add location ??? (zp city ...)
 
