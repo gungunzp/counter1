@@ -83,6 +83,7 @@ fix styling for small mobile screens (iPhone SE 1 ???)
 
 24.10.25
 fix wording for accepted section, hide nullish values from report
+fix negative total result bug (when localStorage was not updated with nullish value)
 ~ 1:00
 
 next planned features:

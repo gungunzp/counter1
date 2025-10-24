@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		data[key] = +value;
 		key !== 'last_update' && (elems[key].querySelector('.category__value').innerHTML = value);
 		last_update.innerHTML = `${txt.refreshedAt}<b>` + (new Date()).toLocaleTimeString() + '</b> <small>' + (new Date()).toLocaleDateString() + '</small>';
-		(+value || key === 'last_update') && localStorage.setItem(key, value);
+		(+value >= 0 ||  key === 'last_update') && localStorage.setItem(key, value);
 	};
 
 	const updateCounter = (param, updateValue) => () => {
